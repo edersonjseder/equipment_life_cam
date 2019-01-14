@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_equipment_detail"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corners_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@drawable/border_color"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="@dimen/side_padding">
+
+            <!-- Equipment brand label and text -->
+            <TextView
+                android:id="@+id/tv_equipment_brand_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/equipment_brand_label"
+                android:layout_marginTop="@dimen/detail_side_margin"
+                android:layout_marginEnd="@dimen/detail_side_margin"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_equipment_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/detail_text_margin_left"
+                tools:text="@string/equipment_brand_content"
+                android:layout_marginTop="@dimen/detail_text_margin_top"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_equipment_brand_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view_color"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"/>
+
+            <!-- Equipment model label and text -->
+            <TextView
+                android:id="@+id/tv_equipment_model_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/equipment_model_label"
+                android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                android:layout_marginEnd="@dimen/detail_side_margin"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_equipment_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/detail_text_margin_left"
+                tools:text="@string/equipment_model_content"
+                android:layout_marginTop="@dimen/detail_text_margin_top"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_equipment_model_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view_color"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp" />
+
+            <!-- Equipment serial number label and text -->
+            <TextView
+                android:id="@+id/tv_equipment_serial_number_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/equipment_serial_number_label"
+                android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                android:layout_marginEnd="@dimen/detail_side_margin"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_equipment_serial_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/detail_text_margin_left"
+                tools:text="@string/equipment_serial_number_content"
+                android:layout_marginTop="@dimen/detail_text_margin_top"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_equipment_serial_number_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view_color"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp" />
+
+            <!-- Equipment registration date label and text -->
+            <TextView
+                android:id="@+id/tv_equipment_registration_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/equipment_registration_date_label"
+                android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                android:layout_marginEnd="@dimen/detail_side_margin"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_equipment_registration_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/detail_text_margin_left"
+                tools:text="@string/equipment_registration_date_content"
+                android:layout_marginTop="@dimen/detail_text_margin_top"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_equipment_registration_date_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view_color"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp" />
+
+            <!-- Equipment owner label and text -->
+            <TextView
+                android:id="@+id/tv_equipment_owner_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/equipment_owner_label"
+                android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                android:layout_marginEnd="@dimen/detail_side_margin"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_equipment_owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/equipment_owner_content"
+                android:layout_marginLeft="@dimen/detail_text_margin_left"
+                android:layout_marginTop="@dimen/detail_text_margin_top"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_equipment_owner_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view_color"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp" />
+
+            <!-- Equipment status label and text -->
+            <TextView
+                android:id="@+id/tv_equipment_status_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/equipment_status_label"
+                android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                android:layout_marginEnd="@dimen/detail_side_margin"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_equipment_status_details"
+                android:background="@drawable/rounded_corners_equipment_status_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_equipment_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/equipment_status_content"
+                    android:textColor="@color/theme_primary"
+                    android:layout_marginLeft="@dimen/detail_text_margin_left"
+                    android:layout_marginTop="@dimen/detail_text_margin_top"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:paddingEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_view_equipment_status_icon"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="16sp"
+                        android:layout_height="16sp"
+                        android:src="@drawable/icon_info"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Equipment short detail label and text -->
+            <TextView
+                android:id="@+id/tv_equipment_short_detail_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_equipment_status_details"
+                android:text="@string/equipment_short_description_label"
+                android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_equipment_short_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_equipment_short_detail_label"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="@dimen/detail_text_margin_left"
+                android:maxLines="6"
+                tools:text="@string/equipment_short_description_content"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

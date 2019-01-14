@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/very_light_blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView_initial_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.0"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="0.0">
+
+
+        <LinearLayout
+            android:id="@+id/layout_initial_screen_land"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="450dp"
+                android:layout_height="430dp"
+                android:layout_marginLeft="@dimen/initial_card_view_side_margin"
+                android:layout_marginTop="@dimen/initial_card_view_top_margin"
+                android:layout_marginRight="@dimen/initial_card_view_side_margin"
+                android:layout_marginBottom="@dimen/initial_card_view_side_margin"
+                card_view:cardBackgroundColor="@color/card_background"
+                card_view:cardCornerRadius="@dimen/initial_screen_card_corner_radius"
+                card_view:cardElevation="@dimen/initial_screen_card_elevation">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_initial_image_screen_logo"
+                        android:layout_width="380dp"
+                        android:layout_height="270dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/initial_screen_linear_layout_margin_side"
+                        android:layout_marginTop="@dimen/initial_screen_linear_layout_margin_top"
+                        android:layout_marginEnd="@dimen/initial_screen_linear_layout_margin_side"
+                        android:background="@drawable/rounded_drawable"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="@dimen/initial_screen_image_width"
+                            android:layout_height="@dimen/initial_screen_image_height"
+                            android:background="@drawable/initial_screen_logo"
+                            android:contentDescription="@string/image_screen_initial_logo"
+                            android:scaleType="centerCrop" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/btn_initial_sign_in"
+                            style="@style/CustomButton"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile_sign_in_button" />
+
+                        <!-- A small divider -->
+                        <View
+                            android:layout_width="137dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent" />
+
+                        <Button
+                            android:id="@+id/btn_initial_sign_up"
+                            style="@style/CustomButton"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile_sign_up_button" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/btn_sign_up_facebook"
+                            style="@style/CustomButtonSocialMedia"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/facebook_logo"
+                            android:text="@string/profile_sign_up_with_facebook_button" />
+
+                        <!-- A small divider -->
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent" />
+
+                        <Button
+                            android:id="@+id/btn_sign_up_google"
+                            style="@style/CustomButtonSocialMedia"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/google"
+                            android:text="@string/profile_sign_up_with_google_button" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

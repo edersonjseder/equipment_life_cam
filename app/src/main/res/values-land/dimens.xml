@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="details_toolbar_padding_start">495dp</dimen>
+    <dimen name="toolbar_equipment_registration_padding_start">335dp</dimen>
+    <dimen name="toolbar_edit_padding_start">350dp</dimen>
+
+    <!-- initial screen card view dimens -->
+    <dimen name="initial_card_view_top_margin">29dp</dimen>
+    <dimen name="initial_card_view_side_margin">54dp</dimen>
+
+    <dimen name="initial_screen_card_corner_radius">8dp</dimen>
+    <dimen name="initial_screen_card_elevation">2dp</dimen>
+
+    <dimen name="initial_screen_linear_layout_margin_top">18dp</dimen>
+    <dimen name="initial_screen_linear_layout_margin_side">18dp</dimen>
+    <dimen name="initial_screen_linear_layout_margin_bottom">68dp</dimen>
+
+    <!-- Image initial -->
+    <dimen name="initial_screen_image_width">270dp</dimen>
+    <dimen name="initial_screen_image_height">200dp</dimen>
+</resources>

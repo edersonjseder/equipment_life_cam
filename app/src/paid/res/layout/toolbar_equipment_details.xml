@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar_equipment_details"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/theme_primary"
+    android:minHeight="?attr/actionBarSize">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_equipment_details_toolbar_label"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/equipment_detail_toolbar_title_label"
+            style="@style/ThemeToolbarTitle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/toolbar_padding_end"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/image_btn_equipment_details_edit"
+                android:clickable="true"
+                android:layout_width="34sp"
+                android:layout_height="34sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_edit"
+                android:background="@color/theme_primary"
+                android:contentDescription="@string/action_edit_equipment_details"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>

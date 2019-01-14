@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_equipment_registration"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/side_edit_margin"
+    android:layout_margin="@dimen/side_edit_margin"
+    android:background="@drawable/rounded_corners_details"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/side_padding"
+        android:background="@drawable/border_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Owner name label and text -->
+        <TextView
+            android:id="@+id/tv_owner_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_detail_name_label"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="12sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/et_profile_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:text="@string/owner_name_content"
+                android:layout_marginTop="@dimen/detail_text_margin_top"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Owner CPF and phone label and text -->
+        <LinearLayout
+            android:id="@+id/layout_owner_cpf_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <!-- Owner CPF label and text -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_owner_cpf_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_detail_cpf_label"
+                    android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                    android:layout_marginEnd="@dimen/detail_side_margin"
+                    android:textSize="12sp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/et_profile_cpf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:maxLength="14"
+                        tools:text="@string/owner_cpf_content"
+                        android:inputType="numberDecimal"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- A small divider -->
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <!-- Owner phone label and text -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_owner_phone_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_detail_phone_label"
+                    android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                    android:layout_marginEnd="@dimen/detail_side_margin"
+                    android:textSize="12sp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/et_profile_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:maxLength="15"
+                        tools:text="@string/owner_phone_content"
+                        android:inputType="phone"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Owner address label and text -->
+        <TextView
+            android:id="@+id/tv_owner_email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_detail_email_label"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="12sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/et_profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:text="@string/owner_email_content"
+                android:layout_marginTop="@dimen/detail_text_margin_top"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Owner address label and text -->
+        <TextView
+            android:id="@+id/tv_owner_address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_detail_address_label"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/et_profile_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:text="@string/owner_address_content"
+            android:layout_marginTop="@dimen/detail_text_margin_top"
+            android:textSize="14sp" />
+
+        <!-- Owner CPF label and text -->
+        <TextView
+            android:id="@+id/tv_owner_city_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/profile_detail_city_label"
+            android:layout_marginTop="@dimen/detail_label_text_margin_top"
+            android:layout_marginEnd="@dimen/detail_side_margin"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/et_profile_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:text="@string/owner_city_content"
+            android:textSize="14sp" />
+
+        <!-- Owner phone label and text -->
+        <TextView
+            android:id="@+id/tv_owner_state_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_detail_state_label"
+            android:layout_marginTop="@dimen/detail_label_text_margin_top"
+            android:layout_marginEnd="@dimen/detail_side_margin"
+            android:layout_marginStart="20dp"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/et_profile_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:text="@string/owner_state_content"
+            android:textSize="14sp" />
+
+        <!-- Owner Login credentials label and text -->
+        <LinearLayout
+            android:id="@+id/layout_owner_passwords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <!-- Password -->
+            <TextView
+                android:id="@+id/tv_owner_password_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_detail_password_label"
+                android:textSize="12sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_profile_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/owner_password_content"
+                    android:inputType="numberPassword"
+                    android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Password Confirm -->
+            <TextView
+                android:id="@+id/tv_owner_password_confirm_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_detail_password_confirm_label"
+                android:textSize="12sp" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_profile_password_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/owner_password_content"
+                    android:inputType="numberPassword"
+                    android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

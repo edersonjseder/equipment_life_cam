@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:label="@string/app_name"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name="cam.equipment.life.com.equipmentlifecam.paid.initial.InitialScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cam.equipment.life.com.equipmentlifecam.paid.equipment.registration.EquipmentRegistrationActivity"
+            android:parentActivityName="cam.equipment.life.com.equipmentlifecam.paid.main.MainCamActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cam.equipment.life.com.equipmentlifecam.paid.main.MainCamActivity" />
+        </activity>
+        <activity
+            android:name="cam.equipment.life.com.equipmentlifecam.paid.equipment.details.EquipmentDetailsActivity"
+            android:parentActivityName="cam.equipment.life.com.equipmentlifecam.paid.main.MainCamActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cam.equipment.life.com.equipmentlifecam.paid.main.MainCamActivity" />
+        </activity>
+        <activity android:name="cam.equipment.life.com.equipmentlifecam.paid.equipment.edit.EquipmentDetailsEditActivity" />
+        <activity
+            android:name="cam.equipment.life.com.equipmentlifecam.paid.owner.details.ProfileDetailsActivity"
+            android:parentActivityName="cam.equipment.life.com.equipmentlifecam.paid.main.MainCamActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cam.equipment.life.com.equipmentlifecam.paid.main.MainCamActivity" />
+        </activity>
+        <activity android:name="cam.equipment.life.com.equipmentlifecam.paid.owner.registration.ProfileRegistrationActivity" />
+        <activity android:name="cam.equipment.life.com.equipmentlifecam.paid.owner.edit.ProfileDetailsEditActivity" />
+        <activity
+            android:name="cam.equipment.life.com.equipmentlifecam.paid.login.LoginActivity"
+            android:parentActivityName="cam.equipment.life.com.equipmentlifecam.paid.initial.InitialScreenActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cam.equipment.life.com.equipmentlifecam.paid.initial.InitialScreenActivity" />
+        </activity>
+        <activity
+            android:name="cam.equipment.life.com.equipmentlifecam.paid.signupfacebook.SignUpFacebookActivity"
+            android:parentActivityName="cam.equipment.life.com.equipmentlifecam.paid.initial.InitialScreenActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cam.equipment.life.com.equipmentlifecam.paid.initial.InitialScreenActivity" />
+        </activity>
+        <activity android:name="cam.equipment.life.com.equipmentlifecam.paid.main.MainCamActivity">
+            <intent-filter>
+                <action android:name="cam.equipment.life.com.equipmentlifecam.paid.main.MainCamActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <service
+            android:name="cam.equipment.life.com.equipmentlifecam.paid.widget.EquipmentWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <receiver android:name="cam.equipment.life.com.equipmentlifecam.paid.widget.EquipmentWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/equipment_widget_provider_info" />
+        </receiver>
+
+        <activity android:name="cam.equipment.life.com.equipmentlifecam.paid.logoutsocial.VerifyLogoutActivity"></activity>
+    </application>
+
+</manifest>

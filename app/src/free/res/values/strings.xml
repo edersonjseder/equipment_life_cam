@@ -1,0 +1,189 @@
+<resources>
+    <string name="app_name">Equipment Life Cam - Free</string>
+
+
+    <!-- Owner edit save cancel content description -->
+    <string name="image_screen_initial_logo">Screen image shown at the app initial</string>
+
+    <!-- Equipment list content description -->
+    <string name="action_add_new_equipment">Add new Equipment Information</string>
+
+    <!-- Equipment registration content description -->
+    <string name="action_save_new_equipment">Save new Equipment Information on Database</string>
+
+    <!-- Equipment edit save content description -->
+    <string name="action_edit_save_equipment">Save the Equipment Information edition on Database</string>
+
+    <!-- Equipment edit save cancel content description -->
+    <string name="action_edit_save_cancel_equipment">Cancel the Equipment Information edition save on Database</string>
+
+    <!-- Equipment details edit content description -->
+    <string name="action_edit_equipment_details">Edit the Equipment Information details on Database</string>
+
+    <!-- Equipment details image content description -->
+    <string name="detail_equipment_image_description">Equipment image detail</string>
+
+    <!-- Equipment upload image content description -->
+    <string name="equipment_upload_image_description">Uploads the Equipment picture to the cloud storage</string>
+
+    <!-- Equipment button to choose picture to upload on cloud content description -->
+    <string name="equipment_choose_image_description">Uploads the Equipment picture to the cloud storage</string>
+
+    <!-- Navigation drawer strings -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="transition_image">transition</string>
+
+    <!-- Equipment Labels -->
+    <string name="equipment_detail_toolbar_title_label">Equipment Details</string>
+    <string name="equipment_detail_edit_toolbar_title_label">Equipment Details Edit</string>
+    <string name="equipment_registration_toolbar_title_label">Equipment Registration</string>
+    <string name="equipment_brand_label">Brand:</string>
+    <string name="equipment_model_label">Model:</string>
+    <string name="equipment_serial_number_label">Serial Number:</string>
+    <string name="equipment_registration_date_label">Date Registered:</string>
+    <string name="equipment_owner_label">Owner:</string>
+    <string name="equipment_status_label">Equipment Status:</string>
+    <string name="equipment_short_description_label">Short Description:</string>
+    <string name="equipment_image_upload_label">Equipment Picture:</string>
+    <string name="equipment_empty_list_label">There are no equipments registered yet</string>
+    <string name="equipment_picture_name_hint">Enter name for Image</string>
+    <string name="equipment_registration_choose_picture_button">Picture</string>
+    <string name="equipment_list_menu_search">Search equipment</string>
+
+    <string name="option_equipment_status_owned">Owned</string>
+    <string name="option_equipment_status_sold">Sold</string>
+    <string name="option_equipment_status_stolen">Stolen</string>
+
+    <string name="equipment_owned_menu">List Equipment Owned</string>
+    <string name="equipment_sold_menu">List Equipment Sold</string>
+    <string name="equipment_stolen_menu">List Equipment Stolen</string>
+
+    <!-- Strings for storage request permission -->
+    <string name="equipment_registration_storage_permission_request_granted">Permission granted, now you can read the storage</string>
+    <string name="equipment_registration_storage_permission_request_not_granted">Oops you just denied the permission</string>
+
+    <!-- Widget string -->
+    <string name="widget_equipment_title">Equipment List</string>
+    <string name="description_widget_text">Shows the list of equipments on a widget list</string>
+
+    <!-- Equipment Detail content - test UI design -->
+    <string name="equipment_brand_content">Canon Digital Profissional</string>
+    <string name="equipment_model_content">Rebel T6 18-55</string>
+    <string name="equipment_serial_number_content">ED577A23DR984</string>
+    <string name="equipment_registration_date_content">23/02/2014</string>
+    <string name="equipment_owner_content">Arthur Aparecido Monteiro Figueiredo</string>
+    <string name="equipment_status_content">Equipment Sold</string>
+    <string name="equipment_short_description_content">A EOS Rebel T6 é a câmera que oferece a qualidade
+        que suas fotografias merecem. Ideal para usuários de smartphones ou câmeras digitais compactas,
+        que buscam por imagens com qualidade superior. Ela vem com um sensor de imagem CMOS de
+        18.0 Megapixels e um processador de imagem DIGIC 4+ para fotos e vídeos.</string>
+
+
+    <!-- Owner edit content description -->
+    <string name="action_edit_profile_detail">Edit the profile Information edition on Database</string>
+
+    <!-- Owner save content description -->
+    <string name="action_save_profile_registration">Saves the profile Information registration on Database</string>
+
+    <!-- Owner edit save content description -->
+    <string name="action_edit_save_profile">Save the Profile Information edition on Database</string>
+
+    <!-- Owner edit save cancel content description -->
+    <string name="action_edit_save_cancel_profile">Cancel the Profile Information edition save on Database</string>
+
+    <!-- Owner Labels -->
+    <string name="profile_detail_menu_label">Profile</string>
+    <string name="profile_detail_toolbar_title_label">Profile Details</string>
+    <string name="profile_detail_edit_toolbar_title_label">Profile Details Edit</string>
+    <string name="profile_registration_toolbar_title_label">Profile Registration</string>
+    <string name="profile_detail_name_label">Name:</string>
+    <string name="profile_detail_cpf_label">CPF:</string>
+    <string name="profile_detail_phone_label">Telephone:</string>
+    <string name="profile_detail_email_label">Email:</string>
+    <string name="profile_detail_address_label">Address:</string>
+    <string name="profile_detail_city_label">City:</string>
+    <string name="profile_detail_state_label">State:</string>
+    <string name="profile_logout_menu_label">Logout</string>
+
+    <!-- Owner initial buttons -->
+    <string name="profile_sign_in_button">Sign In</string>
+    <string name="profile_sign_up_button">Sign Up</string>
+
+    <string name="profile_sign_up_with_facebook_button">Sign Up with</string>
+    <string name="profile_sign_up_with_google_button">Sign Up with</string>
+
+    <!-- Nav bar owner name -->
+    <string name="nav_bar_owner_name_label">User:</string>
+    <string name="nav_bar_owner_username">a.figueiredo</string>
+
+    <!-- Owner login credentials label -->
+    <string name="profile_detail_username_label">Username:</string>
+    <string name="profile_detail_password_label">Password:</string>
+    <string name="profile_detail_password_confirm_label">Confirm password:</string>
+
+    <!-- Login Screen -->
+    <string name="login_email_label">Email</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_password_confirm_label">Confirm Password</string>
+    <string name="login_button_label">Login</string>
+    <string name="signup_button_label">Sign Up</string>
+    <string name="signup_button_label_cancel">Cancel</string>
+    <string name="login_password_error">Incorrect Password</string>
+    <string name="login_profile_validator_password_limit_error">between 4 and 10 alphanumeric characters</string>
+    <string name="login_profile_validator_username_required_error">Email is required</string>
+    <string name="login_profile_validator_password_not_match">Passwords must be matched</string>
+
+    <!-- Profile Registration validation -->
+    <string name="registration_profile_validator_name_required">Name is required</string>
+    <string name="registration_profile_validator_cpf_required">CPF is required</string>
+    <string name="registration_profile_validator_phone_required">Phone is required</string>
+    <string name="registration_profile_validator_address_required">Address is required</string>
+    <string name="registration_profile_validator_city_required">City is required</string>
+    <string name="registration_profile_validator_state_required">State is required</string>
+
+    <string name="login_profile_validator_email_required">Email is required</string>
+    <string name="login_profile_validator_email_not_match">Enter a valid email</string>
+    <string name="login_profile_validator_cpf_not_match">Enter a valid CPF</string>
+
+    <string name="login_alert_dialog_error_login_message">This user doesn\'t exist</string>
+    <string name="login_alert_dialog_button_text">OK</string>
+
+    <!-- Shared preferences info -->
+    <string name="shared_preferences_pref_name">EquipmentLife</string>
+    <string name="shared_preferences_profile_name">profile_name</string>
+    <string name="shared_preferences_profile_email">profile_email</string>
+    <string name="shared_preferences_profile_username">profile_username</string>
+    <string name="shared_preferences_profile_password">profile_password</string>
+    <string name="shared_preferences_profile_is_logged_in">is_logged_in</string>
+
+    <!-- String to be saved on Database -->
+    <string name="equipment_owned">Owned</string>
+    <string name="equipment_sold">Sold</string>
+    <string name="equipment_stolen">Stolen</string>
+
+    <!-- String to be set as text on Equipment details -->
+    <string name="string_equipment_owned">Equipment Owned</string>
+    <string name="string_equipment_sold">Equipment Sold</string>
+    <string name="string_equipment_stolen">Equipment Stolen</string>
+
+    <!-- Owner Detail content - test UI design -->
+    <string name="owner_name_content">Arthur Aparecido Monteiro Figueiredo</string>
+    <string name="owner_cpf_content">363.026.214-08</string>
+    <string name="owner_phone_content">(11) 98520-7896</string>
+    <string name="owner_email_content">a.figueiredo@himself.com</string>
+    <string name="owner_address_content">Summerhill avenue, 557</string>
+    <string name="owner_city_content">paranapiacaba</string>
+    <string name="owner_state_content">Sao Paulo</string>
+
+    <!-- Owner login credentials content - test UI design -->
+    <string name="owner_username_content">a.figueiredo</string>
+    <string name="owner_password_content">123456789</string>
+
+
+    <string name="facebook_app_id">258816171724259</string>
+    <string name="fb_login_protocol_scheme">fb258816171724259</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+</resources>

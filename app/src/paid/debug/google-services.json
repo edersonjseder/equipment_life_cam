@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "1004856501687",
+    "firebase_url": "https://equipmentlifecam.firebaseio.com",
+    "project_id": "equipmentlifecam",
+    "storage_bucket": "equipmentlifecam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004856501687:android:941b284a07583f2c",
+        "android_client_info": {
+          "package_name": "cam.equipment.life.com.equipmentlifecam.paid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004856501687-aj1oo7aueipo8ih058vco9carfcuqvpo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cam.equipment.life.com.equipmentlifecam.free",
+            "certificate_hash": "952af6ce28563a9b223b3a03c6d742743272c0ea"
+          }
+        },
+        {
+          "client_id": "1004856501687-ks3639ck2c8mc01435k13ih3c20mbbr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfV_QrWLBFrkxSV9cIipG-6gCLRsNDvT8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004856501687-ks3639ck2c8mc01435k13ih3c20mbbr2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004856501687:android:f0532f945e19850b",
+        "android_client_info": {
+          "package_name": "cam.equipment.life.com.equipmentlifecam.paid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004856501687-fmg2eh5k51273jcn4vi5non2ieck34d4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cam.equipment.life.com.equipmentlifecam.paid",
+            "certificate_hash": "952af6ce28563a9b223b3a03c6d742743272c0ea"
+          }
+        },
+        {
+          "client_id": "1004856501687-ks3639ck2c8mc01435k13ih3c20mbbr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfV_QrWLBFrkxSV9cIipG-6gCLRsNDvT8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004856501687-ks3639ck2c8mc01435k13ih3c20mbbr2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

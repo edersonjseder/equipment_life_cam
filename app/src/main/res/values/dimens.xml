@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- list -->
+    <dimen name="list_side_margin">4dp</dimen>
+    <dimen name="list_toolbar_side_margin">0dp</dimen>
+    <integer name="list_column_count">2</integer>
+
+    <!-- Details side -->
+    <dimen name="detail_side_margin">4dp</dimen>
+    <dimen name="detail_label_text_margin_top">9dp</dimen>
+    <dimen name="detail_text_margin_top">1dp</dimen>
+    <dimen name="detail_text_margin_left">2dp</dimen>
+    <dimen name="registration_text_margin_left">4dp</dimen>
+    <dimen name="detail_top_margin">4dp</dimen>
+    <dimen name="detail_bottom_margin">6dp</dimen>
+    <dimen name="detail_card_corner_radius">4dp</dimen>
+    <dimen name="detail_card_elevation">4dp</dimen>
+
+    <!-- initial screen card view dimens -->
+    <dimen name="initial_card_view_top_margin">4dp</dimen>
+    <dimen name="initial_card_view_side_margin">4dp</dimen>
+
+    <dimen name="initial_screen_card_corner_radius">8dp</dimen>
+    <dimen name="initial_screen_card_elevation">4dp</dimen>
+
+    <dimen name="initial_screen_linear_layout_margin_top">28dp</dimen>
+    <dimen name="initial_screen_linear_layout_margin_side">18dp</dimen>
+    <dimen name="initial_screen_linear_layout_margin_bottom">68dp</dimen>
+
+    <!-- Equipment empty list dimens -->
+    <dimen name="equipment_empty_list_text_margin_top">6dp</dimen>
+
+    <!-- Equipment list sides -->
+    <dimen name="side_padding">8dp</dimen>
+
+    <!-- Equipment edit sides -->
+    <dimen name="side_edit_margin">6dp</dimen>
+    <dimen name="side_edit_margin_top">4dp</dimen>
+
+    <!-- Toolbar dimens -->
+    <dimen name="toolbar_edit_padding_start">140dp</dimen>
+    <dimen name="toolbar_profile_edit_padding_start">130dp</dimen>
+    <dimen name="details_toolbar_padding_start">172dp</dimen>
+    <dimen name="toolbar_padding_start">115dp</dimen>
+    <dimen name="toolbar_equipment_registration_padding_start">155dp</dimen>
+    <dimen name="toolbar_padding_end">10dp</dimen>
+
+    <!-- Toolbar icons -->
+    <dimen name="toolbar_image_width">28dp</dimen>
+    <dimen name="toolbar_image_height">28dp</dimen>
+
+    <!-- Equipment Nav Bar dimens -->
+    <dimen name="equipment_navbar_horizontal_margin">16dp</dimen>
+    <dimen name="equipment_navbar_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">170dp</dimen>
+
+    <!-- Image initial -->
+    <dimen name="initial_screen_image_width">320dp</dimen>
+    <dimen name="initial_screen_image_height">260dp</dimen>
+
+    <!-- FAB dimens -->
+    <dimen name="fab_elevation">6dp</dimen>
+    <dimen name="fab_press_translation_z">6dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Widget dimens -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="widget_description_size">14dp</dimen>
+    <dimen name="widget_margin">8dp</dimen>
+
+</resources>

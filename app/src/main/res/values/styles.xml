@@ -1,0 +1,140 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="ThemeLifeCam" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="colorAccent">@color/theme_accent</item>
+        <item name="android:textColorSecondary">@color/blue</item>
+        <item name="android:fontFamily">sans-serif-smallcaps</item>
+
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@transition/grid_exit</item>
+        <item name="android:windowExitTransition">@transition/grid_exit</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/transition_activity</item>
+        <item name="android:windowSharedElementExitTransition">@transition/transition_activity</item>
+        <item name="android:windowSharedElementReenterTransition">@transition/transition_activity</item>
+        <item name="android:windowSharedElementReturnTransition">@transition/transition_activity</item>
+    </style>
+
+    <style name="ThemeToolbarTitle">
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ThemeEquipmentEmptyListText">
+        <item name="android:textColor">@color/theme_primary</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginStart">@dimen/detail_text_margin_left</item>
+    </style>
+
+    <style name="StyleEquipmentChooseButtonText">
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-smallcaps</item>
+    </style>
+
+    <style name="StyleEquipmentLoginText">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-smallcaps</item>
+    </style>
+
+    <style name="StyleDialogGoogleLoginText">
+        <item name="android:textColor">@color/btn_cancel_color</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/rounded_btn_cancel_dialog_google</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="StyleNavBarOwnerText">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">sans-serif-smallcaps</item>
+    </style>
+
+    <style name="StyleAlertDialogText">
+        <item name="android:textColor">@color/theme_primary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:fontFamily">sans-serif-smallcaps</item>
+    </style>
+
+    <!-- Custom Button Style -->
+    <style name="CustomButton" parent="android:Widget.Button">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:shadowColor">#FF000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">0.1</item>
+        <item name="android:textSize">16dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!-- Custom Button Style -->
+    <style name="CustomButtonSocialMedia" parent="android:Widget.Button">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:shadowColor">#FF000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">0.1</item>
+        <item name="android:textSize">16dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/button_social_media</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!-- Custom Button Style -->
+    <style name="CustomButtonLogin" parent="android:Widget.Button">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:shadowColor">#FF000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">0.1</item>
+        <item name="android:textSize">16dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/button_social_media</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.DarkActionBar.Home">
+        <item name="android:windowExitTransition">
+            @transition/grid_exit
+        </item>
+    </style>
+
+    <!-- Widget style -->
+    <style name="Widget.MainContentLayout" parent="android:Widget">
+        <item name="android:background">@drawable/film_camera_equipment</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="widget_description">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:textSize">@dimen/widget_description_size</item>
+        <item name="android:background">@drawable/transparent_card_widget</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="StyleTextWidgetDescription">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-smallcaps</item>
+    </style>
+
+</resources>

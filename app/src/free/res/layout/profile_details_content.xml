@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_equipment_registration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/side_edit_margin"
+    android:layout_margin="@dimen/side_edit_margin"
+    android:background="@drawable/rounded_corners_details"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/side_padding"
+        android:background="@drawable/border_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Owner name label and text -->
+        <TextView
+            android:id="@+id/tv_owner_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_detail_name_label"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_owner_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:text="@string/owner_name_content"
+            android:layout_marginTop="@dimen/detail_text_margin_top"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view_owner_name_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_color"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <!-- Owner CPF and phone label and text -->
+        <LinearLayout
+            android:id="@+id/layout_owner_cpf_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <!-- Owner CPF label and text -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_owner_cpf_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_detail_cpf_label"
+                    android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                    android:layout_marginEnd="@dimen/detail_side_margin"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/et_profile_cpf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    tools:text="@string/owner_cpf_content"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/view_owner_cpf_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"/>
+
+            </LinearLayout>
+
+            <!-- Owner phone label and text -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_owner_phone_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_detail_phone_label"
+                    android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                    android:layout_marginEnd="@dimen/detail_side_margin"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/et_profile_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    tools:text="@string/owner_phone_content"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/view_owner_phone_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"
+                    android:layout_marginStart="1dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Owner email label and text -->
+        <TextView
+            android:id="@+id/tv_owner_email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_detail_email_label"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_owner_email_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:text="@string/owner_email_content"
+            android:layout_marginTop="@dimen/detail_text_margin_top"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view_owner_email_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/view_color"/>
+
+        <!-- Owner address label and text -->
+        <TextView
+            android:id="@+id/tv_owner_address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_detail_address_label"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_owner_address_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:text="@string/owner_address_content"
+            android:layout_marginTop="@dimen/detail_text_margin_top"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view_owner_address_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_color"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <!-- Owner City label and text -->
+        <TextView
+            android:id="@+id/tv_owner_city_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/profile_detail_city_label"
+            android:layout_marginTop="@dimen/detail_label_text_margin_top"
+            android:layout_marginEnd="@dimen/detail_side_margin"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_owner_city_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:text="@string/owner_city_content"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view_owner_city_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_color"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <!-- Owner State label and text -->
+        <TextView
+            android:id="@+id/tv_owner_state_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_detail_state_label"
+            android:layout_marginTop="@dimen/detail_label_text_margin_top"
+            android:layout_marginEnd="@dimen/detail_side_margin"
+            android:layout_marginStart="20dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_owner_state_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:text="@string/owner_state_content"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

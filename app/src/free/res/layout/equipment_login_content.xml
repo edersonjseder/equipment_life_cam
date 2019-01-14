@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="46dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+    <ImageView android:src="@drawable/initial_screen_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal" />
+
+    <!--  Username Label -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+        <EditText android:id="@+id/input_email_equipment_login"
+            android:layout_width="match_parent"
+            style="@style/StyleEquipmentLoginText"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/login_email_label" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!--  Password Label -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+        <EditText android:id="@+id/input_password_equipment_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/StyleEquipmentLoginText"
+            android:inputType="textPassword"
+            android:hint="@string/login_password_label"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_equipment_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            style="@style/CustomButtonSocialMedia"
+            android:padding="12dp"
+            android:text="@string/login_button_label"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

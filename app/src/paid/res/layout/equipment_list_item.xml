@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_equipment_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleView_equipment_picture"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/rounded_equipment_image_item_list"
+        android:src="@drawable/album_icon" />
+
+    <TextView
+        android:id="@+id/tv_equipment_brand_list_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/circleView_equipment_picture"
+        android:layout_toRightOf="@+id/circleView_equipment_picture"
+        tools:text="@string/equipment_brand_content"
+        android:textColor="@color/list_item_equipment_brand_text_color"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/et_equipment_owner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_equipment_brand_list_info"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/circleView_equipment_picture"
+        android:layout_toRightOf="@+id/circleView_equipment_picture"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="@string/equipment_owner_content" />
+
+
+    <ImageView
+        android:id="@+id/image_view_equipment_list_status"
+        android:layout_width="32sp"
+        android:layout_height="32sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:padding="6dp"
+        android:src="@drawable/icon_list_black_ok" />
+
+</RelativeLayout>
