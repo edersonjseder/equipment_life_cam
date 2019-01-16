@@ -1,15 +1,11 @@
 package cam.equipment.life.com.equipmentlifecam.free.equipment.details;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.support.annotation.Nullable;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -24,12 +20,12 @@ import cam.equipment.life.com.equipmentlifecam.R;
 import cam.equipment.life.com.equipmentlifecam.database.AppEquipmentLifeDatabase;
 import cam.equipment.life.com.equipmentlifecam.free.equipment.edit.EquipmentDetailsEditActivity;
 import cam.equipment.life.com.equipmentlifecam.free.session.SessionManager;
+import cam.equipment.life.com.equipmentlifecam.listeners.OnPostEquipmentTaskListener;
 import cam.equipment.life.com.equipmentlifecam.model.Equipment;
+import cam.equipment.life.com.equipmentlifecam.utils.EquipmentDetailsAsyncTask;
 import cam.equipment.life.com.equipmentlifecam.utils.Utils;
-import cam.equipment.life.com.equipmentlifecam.viewmodel.EquipmentDetailViewModel;
-import cam.equipment.life.com.equipmentlifecam.viewmodel.factory.EquipmentViewModelFactory;
 
-public class EquipmentDetailsActivity extends AppCompatActivity {
+public class EquipmentDetailsActivity extends AppCompatActivity implements OnPostEquipmentTaskListener {
 
     private static final String TAG = EquipmentDetailsActivity.class.getSimpleName();
 
@@ -64,6 +60,8 @@ public class EquipmentDetailsActivity extends AppCompatActivity {
 
     // To put a flag for details edition
     private SessionManager session;
+
+    private EquipmentDetailsAsyncTask equipmentDetailsAsyncTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,23 +112,11 @@ public class EquipmentDetailsActivity extends AppCompatActivity {
 
         if (hasEditedInfo) {;
 
-            new AsyncTask<String, Void, Equipment>() {
+            equipmentDetailsAsyncTask = new EquipmentDetailsAsyncTask(this, mDb, equipmentInfo.getId());
+            equipmentDetailsAsyncTask.execute();
 
-                @Override
-                protected Equipment doInBackground(String... strings) {
-
-                    equipmentInfo = mDb.equipmentDao().fetchEquipmentById(equipmentInfo.getId());
-
-                    return equipmentInfo;
-                }
-
-                @Override
-                protected void onPostExecute(Equipment equipment) {
-
-                    setDetailsFields(equipment);
-                }
-            }.execute();
         }
+
     }
 
     private void setDetailsFields(Equipment equipment) {
@@ -191,6 +177,13 @@ public class EquipmentDetailsActivity extends AppCompatActivity {
 
         }
 
+
+    }
+
+    @Override
+    public void onTaskCompleted(Equipment equipment) {
+
+        setDetailsFields(equipment);
 
     }
 }

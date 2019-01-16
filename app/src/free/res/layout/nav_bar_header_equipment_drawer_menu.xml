@@ -17,6 +17,7 @@
         android:layout_width="136dp"
         android:layout_height="98dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@drawable/initial_screen_logo" />
+        app:srcCompat="@drawable/initial_screen_logo"
+        android:contentDescription="@string/equipment_nav_bar_image_logo"/>
 
 </LinearLayout>

@@ -3,7 +3,6 @@ package cam.equipment.life.com.equipmentlifecam.paid.widget;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.RemoteViews;
@@ -14,12 +13,15 @@ import java.util.List;
 
 import cam.equipment.life.com.equipmentlifecam.R;
 import cam.equipment.life.com.equipmentlifecam.database.AppEquipmentLifeDatabase;
+import cam.equipment.life.com.equipmentlifecam.listeners.OnPostEquipmentListTaskListener;
 import cam.equipment.life.com.equipmentlifecam.model.Equipment;
+import cam.equipment.life.com.equipmentlifecam.utils.EquipmentListAsyncTask;
 
 import static cam.equipment.life.com.equipmentlifecam.paid.widget.EquipmentWidgetProvider.ACTION_TOAST;
 import static cam.equipment.life.com.equipmentlifecam.paid.widget.EquipmentWidgetProvider.EXTRA_STRING;
 
-public class EquipmentWidgetDataProvider implements RemoteViewsService.RemoteViewsFactory {
+public class EquipmentWidgetDataProvider implements RemoteViewsService.RemoteViewsFactory,
+        OnPostEquipmentListTaskListener {
 
     // Constant for logging
     private static final String TAG = EquipmentWidgetDataProvider.class.getSimpleName();
@@ -29,6 +31,8 @@ public class EquipmentWidgetDataProvider implements RemoteViewsService.RemoteVie
 
     // Member variable for the database
     private AppEquipmentLifeDatabase mDb;
+
+    private EquipmentListAsyncTask equipmentListAsyncTask;
 
     public EquipmentWidgetDataProvider(Context context, Intent intent) {
 
@@ -40,23 +44,8 @@ public class EquipmentWidgetDataProvider implements RemoteViewsService.RemoteVie
 
         mDb = AppEquipmentLifeDatabase.getsInstance(context.getApplicationContext());
 
-        new AsyncTask<String, Void, List<Equipment>>() {
-
-            @Override
-            protected List<Equipment> doInBackground(String... strings) {
-
-                equipmentList = mDb.equipmentDao().fetchAllEquipments();
-
-                return equipmentList;
-            }
-
-            @Override
-            protected void onPostExecute(List<Equipment> equipments) {
-
-                setEquipmentList(equipments);
-            }
-
-        }.execute();
+        equipmentListAsyncTask = new EquipmentListAsyncTask(this, mDb);
+        equipmentListAsyncTask.execute();
 
     }
 
@@ -70,23 +59,8 @@ public class EquipmentWidgetDataProvider implements RemoteViewsService.RemoteVie
 
         mDb = AppEquipmentLifeDatabase.getsInstance(context.getApplicationContext());
 
-        new AsyncTask<String, Void, List<Equipment>>() {
-
-            @Override
-            protected List<Equipment> doInBackground(String... strings) {
-
-                equipmentList = mDb.equipmentDao().fetchAllEquipments();
-
-                return equipmentList;
-            }
-
-            @Override
-            protected void onPostExecute(List<Equipment> equipments) {
-
-                setEquipmentList(equipments);
-            }
-
-        }.execute();
+        equipmentListAsyncTask = new EquipmentListAsyncTask(this, mDb);
+        equipmentListAsyncTask.execute();
 
     }
 
@@ -148,5 +122,12 @@ public class EquipmentWidgetDataProvider implements RemoteViewsService.RemoteVie
 
     public void setEquipmentList(List<Equipment> equipmentList) {
         this.equipmentList = equipmentList;
+    }
+
+    @Override
+    public void onTaskCompleted(List<Equipment> equipments) {
+
+        setEquipmentList(equipments);
+
     }
 }

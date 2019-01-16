@@ -96,6 +96,16 @@ public class InitialScreenActivity extends AppCompatActivity implements View.OnC
 
             finish();
 
+        } else {
+
+            if (session.verifyIfUserHasLoggedInAlreadyFirstTime()) {
+
+                startActivity(new Intent(this, LoginActivity.class));
+
+                finish();
+
+            }
+
         }
 
         // Check if the user has already logged in for the first time

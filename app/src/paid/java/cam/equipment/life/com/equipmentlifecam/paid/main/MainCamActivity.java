@@ -4,7 +4,6 @@ import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -46,6 +45,7 @@ import butterknife.ButterKnife;
 import cam.equipment.life.com.equipmentlifecam.R;
 import cam.equipment.life.com.equipmentlifecam.database.AppEquipmentLifeDatabase;
 import cam.equipment.life.com.equipmentlifecam.executors.AppExecutors;
+import cam.equipment.life.com.equipmentlifecam.listeners.OnPostEquipmentListTaskListener;
 import cam.equipment.life.com.equipmentlifecam.model.Equipment;
 import cam.equipment.life.com.equipmentlifecam.model.Profile;
 import cam.equipment.life.com.equipmentlifecam.paid.adapter.EquipmentAdapter;
@@ -54,6 +54,7 @@ import cam.equipment.life.com.equipmentlifecam.paid.equipment.registration.Equip
 import cam.equipment.life.com.equipmentlifecam.paid.listeners.OnEquipmentItemSelectedListener;
 import cam.equipment.life.com.equipmentlifecam.paid.owner.details.ProfileDetailsActivity;
 import cam.equipment.life.com.equipmentlifecam.paid.session.SessionManager;
+import cam.equipment.life.com.equipmentlifecam.utils.EquipmentListAsyncTask;
 import cam.equipment.life.com.equipmentlifecam.viewmodel.EquipmentListWithQueryViewModel;
 import cam.equipment.life.com.equipmentlifecam.viewmodel.EquipmentViewModel;
 import cam.equipment.life.com.equipmentlifecam.viewmodel.ProfileDetailViewModel;
@@ -64,7 +65,7 @@ import static cam.equipment.life.com.equipmentlifecam.paid.session.SessionManage
 import static cam.equipment.life.com.equipmentlifecam.paid.session.SessionManager.KEY_EMAIL;
 
 public class MainCamActivity extends AppCompatActivity implements OnEquipmentItemSelectedListener,
-        NavigationView.OnNavigationItemSelectedListener {
+        NavigationView.OnNavigationItemSelectedListener, OnPostEquipmentListTaskListener {
 
     // Constant for logging
     private static final String TAG = MainCamActivity.class.getSimpleName();
@@ -108,6 +109,8 @@ public class MainCamActivity extends AppCompatActivity implements OnEquipmentIte
 
     /** Google API **/
     private GoogleApiClient mGoogleApiClient;
+
+    private EquipmentListAsyncTask equipmentListAsyncTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -276,26 +279,10 @@ public class MainCamActivity extends AppCompatActivity implements OnEquipmentIte
     }
 
     private void asyncTaskGetAllEquipments() {
-        new AsyncTask<String, Void, List<Equipment>>() {
 
-            @Override
-            protected List<Equipment> doInBackground(String... strings) {
+        equipmentListAsyncTask = new EquipmentListAsyncTask(this, mDb);
+        equipmentListAsyncTask.execute();
 
-                equipmentList = mDb.equipmentDao().fetchAllEquipments();
-
-                return equipmentList;
-            }
-
-            @Override
-            protected void onPostExecute(List<Equipment> equipments) {
-
-                if ((equipments.isEmpty())) {
-                    layoutEquipmentEmptyListText.setVisibility(View.VISIBLE);
-                }
-
-                mEquipmentAdapter.setEquipments(equipments);
-            }
-        }.execute();
     }
 
     @Override
@@ -522,6 +509,19 @@ public class MainCamActivity extends AppCompatActivity implements OnEquipmentIte
     private void setupTransition(){
         Fade fade = (Fade) TransitionInflater.from(this).inflateTransition(R.transition.grid_exit);
         getWindow().setExitTransition(fade);
+    }
+
+    @Override
+    public void onTaskCompleted(List<Equipment> equipments) {
+
+        if ((equipments.isEmpty())) {
+            layoutEquipmentEmptyListText.setVisibility(View.VISIBLE);
+        }
+
+        equipmentList = equipments;
+
+        mEquipmentAdapter.setEquipments(equipments);
+
     }
 
 }

@@ -1,19 +1,14 @@
 package cam.equipment.life.com.equipmentlifecam.paid.equipment.details;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.Fade;
 import android.transition.TransitionInflater;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -21,20 +16,18 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cam.equipment.life.com.equipmentlifecam.R;
 import cam.equipment.life.com.equipmentlifecam.database.AppEquipmentLifeDatabase;
+import cam.equipment.life.com.equipmentlifecam.listeners.OnPostEquipmentTaskListener;
 import cam.equipment.life.com.equipmentlifecam.model.Equipment;
 import cam.equipment.life.com.equipmentlifecam.paid.equipment.edit.EquipmentDetailsEditActivity;
 import cam.equipment.life.com.equipmentlifecam.paid.session.SessionManager;
+import cam.equipment.life.com.equipmentlifecam.utils.EquipmentDetailsAsyncTask;
 import cam.equipment.life.com.equipmentlifecam.utils.Utils;
-import cam.equipment.life.com.equipmentlifecam.viewmodel.EquipmentDetailViewModel;
-import cam.equipment.life.com.equipmentlifecam.viewmodel.factory.EquipmentViewModelFactory;
 
-public class EquipmentDetailsActivity extends AppCompatActivity {
+public class EquipmentDetailsActivity extends AppCompatActivity implements OnPostEquipmentTaskListener {
 
     private static final String TAG = EquipmentDetailsActivity.class.getSimpleName();
 
@@ -69,6 +62,8 @@ public class EquipmentDetailsActivity extends AppCompatActivity {
 
     // To put a flag for details edition
     private SessionManager session;
+
+    private EquipmentDetailsAsyncTask equipmentDetailsAsyncTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,22 +115,8 @@ public class EquipmentDetailsActivity extends AppCompatActivity {
 
         if (hasEditedInfo) {
 
-            new AsyncTask<String, Void, Equipment>() {
-
-                @Override
-                protected Equipment doInBackground(String... strings) {
-
-                    equipmentInfo = mDb.equipmentDao().fetchEquipmentById(equipmentInfo.getId());
-
-                    return equipmentInfo;
-                }
-
-                @Override
-                protected void onPostExecute(Equipment equipment) {
-
-                    setDetailsFields(equipment);
-                }
-            }.execute();
+            equipmentDetailsAsyncTask = new EquipmentDetailsAsyncTask(this, mDb, equipmentInfo.getId());
+            equipmentDetailsAsyncTask.execute();
 
         }
 
@@ -204,5 +185,12 @@ public class EquipmentDetailsActivity extends AppCompatActivity {
     private void setupTransition(){
         Fade fade = (Fade) TransitionInflater.from(this).inflateTransition(R.transition.grid_exit);
         getWindow().setEnterTransition(fade);
+    }
+
+    @Override
+    public void onTaskCompleted(Equipment equipment) {
+
+        setDetailsFields(equipment);
+
     }
 }

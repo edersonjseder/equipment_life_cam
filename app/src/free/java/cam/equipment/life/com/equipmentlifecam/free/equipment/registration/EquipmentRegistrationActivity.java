@@ -398,7 +398,7 @@ public class EquipmentRegistrationActivity extends AppCompatActivity {
 
                         progressBarEquipmentRegistPictureUpload.setVisibility(View.GONE);
 
-                        Toast.makeText(EquipmentRegistrationActivity.this, "Successfully uploaded", Toast.LENGTH_LONG).show();
+                        Toast.makeText(EquipmentRegistrationActivity.this, getResources().getString(R.string.equipment_upload_image_successful), Toast.LENGTH_LONG).show();
 
                         if (downloadUri != null) {
                             urlEquipmentPicture = downloadUri.toString();

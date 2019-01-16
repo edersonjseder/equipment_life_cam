@@ -1,14 +1,9 @@
 package cam.equipment.life.com.equipmentlifecam.free.owner.details;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -18,11 +13,11 @@ import cam.equipment.life.com.equipmentlifecam.R;
 import cam.equipment.life.com.equipmentlifecam.database.AppEquipmentLifeDatabase;
 import cam.equipment.life.com.equipmentlifecam.free.owner.edit.ProfileDetailsEditActivity;
 import cam.equipment.life.com.equipmentlifecam.free.session.SessionManager;
+import cam.equipment.life.com.equipmentlifecam.listeners.OnPostProfileTaskListener;
 import cam.equipment.life.com.equipmentlifecam.model.Profile;
-import cam.equipment.life.com.equipmentlifecam.viewmodel.ProfileDetailViewModel;
-import cam.equipment.life.com.equipmentlifecam.viewmodel.factory.ProfileViewModelFactory;
+import cam.equipment.life.com.equipmentlifecam.utils.ProfileDetailsAsyncTask;
 
-public class ProfileDetailsActivity extends AppCompatActivity {
+public class ProfileDetailsActivity extends AppCompatActivity implements OnPostProfileTaskListener {
 
     private static final String TAG = ProfileDetailsActivity.class.getSimpleName();
 
@@ -49,6 +44,8 @@ public class ProfileDetailsActivity extends AppCompatActivity {
 
     // To put a flag for details edition
     private SessionManager session;
+
+    private ProfileDetailsAsyncTask profileDetailsAsyncTask;
 
     public static final String HAS_EDITED = "hasEditedInfo";
 
@@ -90,22 +87,8 @@ public class ProfileDetailsActivity extends AppCompatActivity {
 
         if (hasEditedInfo) {
 
-            new AsyncTask<String, Void, Profile>() {
-
-                @Override
-                protected Profile doInBackground(String... strings) {
-
-                    profileInfo = mDb.profileDao().fetchProfileByEmail(profileInfo.getEmail());
-
-                    return profileInfo;
-                }
-
-                @Override
-                protected void onPostExecute(Profile profile) {
-
-                    setDetailsFields(profile);
-                }
-            }.execute();
+            profileDetailsAsyncTask = new ProfileDetailsAsyncTask(this, mDb, profileInfo.getEmail());
+            profileDetailsAsyncTask.execute();
 
         }
     }
@@ -138,4 +121,12 @@ public class ProfileDetailsActivity extends AppCompatActivity {
         textViewProfileState.setText(profile.getState());
 
     }
+
+    @Override
+    public void onTaskCompleted(Profile profile) {
+
+        setDetailsFields(profile);
+
+    }
+
 }

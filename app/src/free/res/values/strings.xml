@@ -29,6 +29,24 @@
     <!-- Equipment button to choose picture to upload on cloud content description -->
     <string name="equipment_choose_image_description">Uploads the Equipment picture to the cloud storage</string>
 
+    <string name="equipment_detail_image_status">Shows the Equipment status demonstration with an icon to the user</string>
+
+    <string name="equipment_initial_image_button_google_login">Shows the Google icon as an option for the user to login via Google account</string>
+
+    <string name="equipment_initial_image_button_google_facebook_login">Shows the Facebook icon as an option for the user to login via Facebook account</string>
+
+    <string name="equipment_nav_bar_image_logo">Shows the equipment app logo in the drawer menu</string>
+
+    <string name="equipment_menu_image_owned_status_icon">Shows the equipment menu owned icon in the drawer menu</string>
+
+    <string name="equipment_menu_image_sold_status_icon">Shows the equipment menu sold icon in the drawer menu</string>
+
+    <string name="equipment_menu_image_stolen_status_icon">Shows the equipment menu stolen icon in the drawer menu</string>
+
+    <string name="equipment_list_item_circular_image">Shows the equipment picture on the list item</string>
+
+    <string name="equipment_list_item_status_icon_image">Shows the equipment status icon on the list item</string>
+
     <!-- Navigation drawer strings -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -51,6 +69,8 @@
     <string name="equipment_picture_name_hint">Enter name for Image</string>
     <string name="equipment_registration_choose_picture_button">Picture</string>
     <string name="equipment_list_menu_search">Search equipment</string>
+    <string name="equipment_checkbox_upload_image">Upload Image?</string>
+    <string name="equipment_upload_image_successful">Successfully uploaded</string>
 
     <string name="option_equipment_status_owned">Owned</string>
     <string name="option_equipment_status_sold">Sold</string>

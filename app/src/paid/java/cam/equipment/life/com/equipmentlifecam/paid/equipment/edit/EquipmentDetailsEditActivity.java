@@ -413,7 +413,7 @@ public class EquipmentDetailsEditActivity extends AppCompatActivity {
 
                         progressBarEquipmentEditPictureUpload.setVisibility(View.INVISIBLE);
 
-                        Toast.makeText(EquipmentDetailsEditActivity.this, "Successfully uploaded", Toast.LENGTH_LONG).show();
+                        Toast.makeText(EquipmentDetailsEditActivity.this, getResources().getString(R.string.equipment_upload_image_successful), Toast.LENGTH_LONG).show();
 
                         if (downloadUri != null) {
                             urlEquipmentPicture = downloadUri.toString();

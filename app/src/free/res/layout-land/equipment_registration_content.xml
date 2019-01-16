@@ -207,7 +207,7 @@
             <!-- Equipment picture label and text -->
             <CheckBox
                 android:id="@+id/checkbox_registration_upload_image_verify"
-                android:text="Upload Image?"
+                android:text="@string/equipment_checkbox_upload_image"
                 android:textSize="12sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

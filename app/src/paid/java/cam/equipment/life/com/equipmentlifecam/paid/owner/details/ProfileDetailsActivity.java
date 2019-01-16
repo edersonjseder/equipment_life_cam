@@ -18,13 +18,15 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import cam.equipment.life.com.equipmentlifecam.R;
 import cam.equipment.life.com.equipmentlifecam.database.AppEquipmentLifeDatabase;
+import cam.equipment.life.com.equipmentlifecam.listeners.OnPostProfileTaskListener;
 import cam.equipment.life.com.equipmentlifecam.model.Profile;
 import cam.equipment.life.com.equipmentlifecam.paid.owner.edit.ProfileDetailsEditActivity;
 import cam.equipment.life.com.equipmentlifecam.paid.session.SessionManager;
+import cam.equipment.life.com.equipmentlifecam.utils.ProfileDetailsAsyncTask;
 import cam.equipment.life.com.equipmentlifecam.viewmodel.ProfileDetailViewModel;
 import cam.equipment.life.com.equipmentlifecam.viewmodel.factory.ProfileViewModelFactory;
 
-public class ProfileDetailsActivity extends AppCompatActivity {
+public class ProfileDetailsActivity extends AppCompatActivity implements OnPostProfileTaskListener {
 
     private static final String TAG = ProfileDetailsActivity.class.getSimpleName();
 
@@ -53,6 +55,8 @@ public class ProfileDetailsActivity extends AppCompatActivity {
     private SessionManager session;
 
     public static final String HAS_EDITED = "hasEditedInfo";
+
+    private ProfileDetailsAsyncTask profileDetailsAsyncTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,22 +98,8 @@ public class ProfileDetailsActivity extends AppCompatActivity {
 
         if (hasEditedInfo) {
 
-            new AsyncTask<String, Void, Profile>() {
-
-                @Override
-                protected Profile doInBackground(String... strings) {
-
-                    profileInfo = mDb.profileDao().fetchProfileByEmail(profileInfo.getEmail());
-
-                    return profileInfo;
-                }
-
-                @Override
-                protected void onPostExecute(Profile profile) {
-
-                    setDetailsFields(profile);
-                }
-            }.execute();
+            profileDetailsAsyncTask = new ProfileDetailsAsyncTask(this, mDb, profileInfo.getEmail());
+            profileDetailsAsyncTask.execute();
 
         }
     }
@@ -148,4 +138,10 @@ public class ProfileDetailsActivity extends AppCompatActivity {
         getWindow().setEnterTransition(fade);
     }
 
+    @Override
+    public void onTaskCompleted(Profile profile) {
+
+        setDetailsFields(profile);
+
+    }
 }

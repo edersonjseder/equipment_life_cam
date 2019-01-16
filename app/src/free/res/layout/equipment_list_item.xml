@@ -13,7 +13,8 @@
         android:layout_marginTop="4dp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/rounded_equipment_image_item_list"
-        android:src="@drawable/album_icon" />
+        android:src="@drawable/album_icon"
+        android:contentDescription="@string/equipment_list_item_circular_image" />
 
     <TextView
         android:id="@+id/tv_equipment_brand_list_info"
@@ -52,6 +53,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="3dp"
         android:padding="6dp"
-        android:src="@drawable/icon_list_black_ok" />
+        android:src="@drawable/icon_list_black_ok"
+        android:contentDescription="@string/equipment_list_item_status_icon_image" />
 
 </RelativeLayout>

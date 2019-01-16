@@ -105,30 +105,28 @@ public class InitialScreenActivity extends AppCompatActivity implements View.OnC
 
             startActivity(intent);
 
-        } else {
+            finish();
 
-            if (session.verifyIfUserHasLoggedInAlreadyFirstTime()) {
+        } else if (session.verifyIfUserHasLoggedInAlreadyFirstTime()) {
 
-                if (google || facebook) {
+            if (google || facebook) {
 
-                    Bundle bundle = new Bundle();
+                Bundle bundle = new Bundle();
 
-                    bundle.putString(KEY_EMAIL, email);
+                bundle.putString(KEY_EMAIL, email);
 
-                    Intent intent = new Intent(this, VerifyLogoutActivity.class);
+                Intent intent = new Intent(this, VerifyLogoutActivity.class);
 
-                    intent.putExtras(bundle);
+                intent.putExtras(bundle);
 
-                    startActivity(intent);
+                startActivity(intent);
 
 
-                } else {
+            } else {
 
-                    startActivity(new Intent(this, LoginActivity.class));
+                startActivity(new Intent(this, LoginActivity.class));
 
-                    finish();
-
-                }
+                finish();
 
             }
 

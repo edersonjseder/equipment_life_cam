@@ -115,7 +115,8 @@
                             android:layout_height="wrap_content"
                             android:drawableEnd="@drawable/facebook_logo"
                             style="@style/CustomButtonSocialMedia"
-                            android:text="@string/profile_sign_up_with_facebook_button" />
+                            android:text="@string/profile_sign_up_with_facebook_button"
+                            android:contentDescription="equipment_initial_image_button_facebook_login"/>
 
                         <!-- A small divider -->
                         <View
@@ -129,7 +130,8 @@
                             android:layout_height="wrap_content"
                             android:drawableEnd="@drawable/google"
                             style="@style/CustomButtonSocialMedia"
-                            android:text="@string/profile_sign_up_with_google_button" />
+                            android:text="@string/profile_sign_up_with_google_button"
+                            android:contentDescription="equipment_initial_image_button_google_login"/>
 
                     </LinearLayout>
 

@@ -5,15 +5,18 @@
         <item
             android:id="@+id/nav_equipment_owned"
             android:icon="@drawable/nav_menu_status_owned"
-            android:title="@string/equipment_owned_menu" />
+            android:title="@string/equipment_owned_menu"
+            android:contentDescription="@string/equipment_menu_image_owned_status_icon"/>
         <item
             android:id="@+id/nav_equipment_sold"
             android:icon="@drawable/nav_menu_status_sold"
-            android:title="@string/equipment_sold_menu" />
+            android:title="@string/equipment_sold_menu"
+            android:contentDescription="@string/equipment_menu_image_sold_status_icon"/>
         <item
             android:id="@+id/nav_equipment_stolen"
             android:icon="@drawable/nav_menu_status_stolen"
-            android:title="@string/equipment_stolen_menu" />
+            android:title="@string/equipment_stolen_menu"
+            android:contentDescription="@string/equipment_menu_image_stolen_status_icon"/>
     </group>
 
 </menu>

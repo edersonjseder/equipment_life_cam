@@ -193,7 +193,8 @@
                         android:layout_gravity="center_vertical"
                         android:layout_width="16sp"
                         android:layout_height="16sp"
-                        android:src="@drawable/icon_info"/>
+                        android:src="@drawable/icon_info"
+                        android:contentDescription="@string/equipment_detail_image_status"/>
 
                 </LinearLayout>
 

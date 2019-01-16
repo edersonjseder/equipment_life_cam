@@ -49,8 +49,10 @@ import cam.equipment.life.com.equipmentlifecam.free.equipment.registration.Equip
 import cam.equipment.life.com.equipmentlifecam.free.listeners.OnEquipmentItemSelectedListener;
 import cam.equipment.life.com.equipmentlifecam.free.owner.details.ProfileDetailsActivity;
 import cam.equipment.life.com.equipmentlifecam.free.session.SessionManager;
+import cam.equipment.life.com.equipmentlifecam.listeners.OnPostEquipmentListTaskListener;
 import cam.equipment.life.com.equipmentlifecam.model.Equipment;
 import cam.equipment.life.com.equipmentlifecam.model.Profile;
+import cam.equipment.life.com.equipmentlifecam.utils.EquipmentListAsyncTask;
 import cam.equipment.life.com.equipmentlifecam.viewmodel.EquipmentListWithQueryViewModel;
 import cam.equipment.life.com.equipmentlifecam.viewmodel.EquipmentViewModel;
 import cam.equipment.life.com.equipmentlifecam.viewmodel.ProfileDetailViewModel;
@@ -63,7 +65,7 @@ import static cam.equipment.life.com.equipmentlifecam.free.session.SessionManage
 import static cam.equipment.life.com.equipmentlifecam.free.session.SessionManager.KEY_EMAIL;
 
 public class MainCamActivity extends AppCompatActivity implements OnEquipmentItemSelectedListener,
-        NavigationView.OnNavigationItemSelectedListener {
+        NavigationView.OnNavigationItemSelectedListener, OnPostEquipmentListTaskListener {
 
     // Constant for logging
     private static final String TAG = MainCamActivity.class.getSimpleName();
@@ -107,6 +109,8 @@ public class MainCamActivity extends AppCompatActivity implements OnEquipmentIte
 
     // Flag to check if login was from facebook
     private boolean isLoginFromFacebook;
+
+    private EquipmentListAsyncTask equipmentListAsyncTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -288,39 +292,22 @@ public class MainCamActivity extends AppCompatActivity implements OnEquipmentIte
         });
     }
 
+    /**
+     * This method fetches all equipments and put them in a list to be shown on recyclerview
+     */
     private void asyncTaskGetAllEquipments() {
-        new AsyncTask<String, Void, List<Equipment>>() {
 
-            @Override
-            protected List<Equipment> doInBackground(String... strings) {
+        equipmentListAsyncTask = new EquipmentListAsyncTask(this, mDb);
+        equipmentListAsyncTask.execute();
 
-                equipmentList = mDb.equipmentDao().fetchAllEquipments();
-
-                return equipmentList;
-            }
-
-            @Override
-            protected void onPostExecute(List<Equipment> equipments) {
-
-                if (equipments.size() == 10) {
-
-                    amountItemStored = equipments.size();
-                    isAmountLimit = true;
-
-                    session.editor.putInt(AMOUNT_ITEMS_STORED, amountItemStored);
-                    session.editor.putBoolean(FLAG_ITEMS_STORED, isAmountLimit);
-
-                }
-
-                if ((equipments.isEmpty())) {
-                    layoutEquipmentEmptyListText.setVisibility(View.VISIBLE);
-                }
-
-                mEquipmentAdapter.setEquipments(equipments);
-            }
-        }.execute();
     }
 
+    /**
+     * This method is used to select an item from the recycler view and pass it to the details activity
+     *
+     * @param equipment the equipment object got from adapter
+     * @param position the position clicked by the user on screen
+     */
     @Override
     public void onEquipmentItemSelected(Equipment equipment, int position) {
         Log.i(TAG, "onEquipmentItemSelected() inside method");
@@ -503,4 +490,26 @@ public class MainCamActivity extends AppCompatActivity implements OnEquipmentIte
         getWindow().setExitTransition(fade);
     }
 
+    @Override
+    public void onTaskCompleted(List<Equipment> equipments) {
+
+        if (equipments.size() == 10) {
+
+            amountItemStored = equipments.size();
+            isAmountLimit = true;
+
+            session.editor.putInt(AMOUNT_ITEMS_STORED, amountItemStored);
+            session.editor.putBoolean(FLAG_ITEMS_STORED, isAmountLimit);
+
+        } else if ((equipments.isEmpty())) {
+
+            layoutEquipmentEmptyListText.setVisibility(View.VISIBLE);
+
+        }
+
+        equipmentList = equipments;
+
+        mEquipmentAdapter.setEquipments(equipments);
+
+    }
 }
