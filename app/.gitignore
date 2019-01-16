@@ -1,1 +1,5 @@
 /build
+
+/app/src/free/debug/google-services.json
+/app/src/paid/debug/google-services.json
+/app/credentials.json
