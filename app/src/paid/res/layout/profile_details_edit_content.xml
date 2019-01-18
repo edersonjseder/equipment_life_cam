@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
+                android:hint="@string/hint_profile_edit_name"
                 tools:text="@string/owner_name_content"
                 android:layout_marginTop="@dimen/detail_text_margin_top"
                 android:textSize="14sp" />
@@ -77,6 +78,7 @@
                         android:paddingStart="2dp"
                         android:paddingEnd="2dp"
                         android:maxLength="14"
+                        android:hint="@string/hint_profile_edit_cpf"
                         tools:text="@string/owner_cpf_content"
                         android:inputType="numberDecimal"
                         android:textSize="14sp" />
@@ -118,6 +120,7 @@
                         android:paddingStart="2dp"
                         android:paddingEnd="2dp"
                         android:maxLength="15"
+                        android:hint="@string/hint_profile_edit_telephone"
                         tools:text="@string/owner_phone_content"
                         android:inputType="phone"
                         android:textSize="14sp" />
@@ -147,6 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
+                android:hint="@string/hint_profile_edit_email"
                 tools:text="@string/owner_email_content"
                 android:layout_marginTop="@dimen/detail_text_margin_top"
                 android:textSize="14sp" />
@@ -169,6 +173,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
+            android:hint="@string/hint_profile_edit_address"
             tools:text="@string/owner_address_content"
             android:layout_marginTop="@dimen/detail_text_margin_top"
             android:textSize="14sp" />
@@ -190,6 +195,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
+            android:hint="@string/hint_profile_edit_city"
             tools:text="@string/owner_city_content"
             android:textSize="14sp" />
 
@@ -210,6 +216,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
+            android:hint="@string/hint_profile_edit_state"
             tools:text="@string/owner_state_content"
             android:textSize="14sp" />
 
@@ -238,6 +245,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="@string/owner_password_content"
+                    android:hint="@string/hint_profile_edit_password"
                     android:inputType="numberPassword"
                     android:textSize="14sp" />
             </android.support.design.widget.TextInputLayout>
@@ -259,6 +267,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="@string/owner_password_content"
+                    android:hint="@string/hint_profile_edit_password_confirm"
                     android:inputType="numberPassword"
                     android:textSize="14sp" />
             </android.support.design.widget.TextInputLayout>

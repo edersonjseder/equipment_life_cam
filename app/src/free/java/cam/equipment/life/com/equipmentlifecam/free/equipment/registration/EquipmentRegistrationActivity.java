@@ -51,7 +51,7 @@ public class EquipmentRegistrationActivity extends AppCompatActivity {
 
     private static final String TAG = EquipmentRegistrationActivity.class.getSimpleName();
 
-    public static final String FLAG_LIMIT = "limitInsertions";
+    private static final String FLAG_LIMIT = "limitInsertions";
 
     @BindView(R.id.et_equipment_regist_brand) EditText editViewEquipmentBrand;
 
@@ -85,7 +85,7 @@ public class EquipmentRegistrationActivity extends AppCompatActivity {
     private AppEquipmentLifeDatabase mDb;
 
     //Image request code
-    private int PICK_IMAGE_REQUEST = 1;
+    private final int PICK_IMAGE_REQUEST = 1;
 
     //storage permission code
     private static final int STORAGE_PERMISSION_CODE = 123;
@@ -207,7 +207,7 @@ public class EquipmentRegistrationActivity extends AppCompatActivity {
      * onSaveButtonClicked is called when the "save" button is clicked.
      * It retrieves user input and inserts that new equipment data into the underlying database.
      */
-    public void onSaveButtonClicked() {
+    private void onSaveButtonClicked() {
         Log.i(TAG, "onSaveButtonClicked() inside method");
 
         final Equipment equipment = new Equipment();
@@ -289,7 +289,7 @@ public class EquipmentRegistrationActivity extends AppCompatActivity {
     /**
      * getEquipmentStatusFromViews is called whenever the selected status needs to be retrieved
      */
-    public String getEquipmentStatusFromViews() {
+    private String getEquipmentStatusFromViews() {
 
         String status = "";
 

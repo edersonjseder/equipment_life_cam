@@ -11,13 +11,13 @@ import cam.equipment.life.com.equipmentlifecam.dao.ProfileDao;
 import cam.equipment.life.com.equipmentlifecam.database.AppEquipmentLifeDatabase;
 import cam.equipment.life.com.equipmentlifecam.model.Profile;
 
-public class ProfileViewModel extends AndroidViewModel {
+class ProfileViewModel extends AndroidViewModel {
     // Constant for logging
     private static final String TAG = ProfileViewModel.class.getSimpleName();
 
-    private ExecutorService executorService;
+    private final ExecutorService executorService;
 
-    private ProfileDao profileDao;
+    private final ProfileDao profileDao;
 
     public ProfileViewModel(@NonNull Application application) {
         super(application);

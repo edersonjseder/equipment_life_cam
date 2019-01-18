@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
+                android:hint="@string/hint_profile_registration_name"
                 tools:text="@string/owner_name_content"
                 android:layout_marginTop="@dimen/detail_text_margin_top"
                 android:textSize="14sp"
@@ -74,6 +75,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         tools:text="@string/owner_cpf_content"
+                        android:hint="@string/hint_profile_registration_cpf"
                         android:paddingStart="2dp"
                         android:paddingEnd="2dp"
                         android:maxLength="14"
@@ -116,6 +118,7 @@
                         android:layout_height="wrap_content"
                         android:paddingStart="2dp"
                         android:paddingEnd="2dp"
+                        android:hint="@string/hint_profile_registration_telephone"
                         tools:text="@string/owner_phone_content"
                         android:maxLength="15"
                         android:inputType="phone"
@@ -150,6 +153,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 tools:text="@string/owner_email_content"
+                android:hint="@string/hint_profile_registration_email"
                 android:layout_marginTop="@dimen/detail_text_margin_top"
                 android:textSize="14sp"
                 android:nextFocusForward="@+id/et_owner_address" />
@@ -179,6 +183,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 tools:text="@string/owner_address_content"
+                android:hint="@string/hint_profile_registration_address"
                 android:layout_marginTop="@dimen/detail_text_margin_top"
                 android:textSize="14sp"
                 android:nextFocusForward="@+id/et_owner_city" />
@@ -207,6 +212,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 tools:text="@string/owner_city_content"
+                android:hint="@string/hint_profile_registration_city"
                 android:textSize="14sp"
                 android:nextFocusForward="@+id/et_owner_state" />
 
@@ -234,6 +240,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
+                android:hint="@string/hint_profile_registration_state"
                 tools:text="@string/owner_state_content"
                 android:textSize="14sp" />
 

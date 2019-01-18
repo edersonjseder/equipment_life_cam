@@ -23,7 +23,8 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="@string/image_widget_list" />
 
             <LinearLayout
                 android:id="@+id/widgetTopBar"

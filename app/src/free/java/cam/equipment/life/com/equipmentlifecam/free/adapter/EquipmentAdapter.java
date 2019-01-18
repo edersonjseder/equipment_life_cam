@@ -23,11 +23,9 @@ import cam.equipment.life.com.equipmentlifecam.utils.Utils;
 
 public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentViewHolder> {
 
-    private static final String TAG = EquipmentAdapter.class.getSimpleName();
-
-    private OnEquipmentItemSelectedListener mOnEquipmentItemSelectedListener;
+    private final OnEquipmentItemSelectedListener mOnEquipmentItemSelectedListener;
     private List<Equipment> equipmentList;
-    private Context context;
+    private final Context context;
 
     public EquipmentAdapter(OnEquipmentItemSelectedListener mOnEquipmentItemSelectedListener,
                             Context mContext) {
@@ -112,23 +110,6 @@ public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentViewHolder> 
         notifyDataSetChanged();
     }
 
-    public void setData(List<Equipment> equipments) {
-        if (equipmentList != null) {
-            EquipmentDiffCallback equipmentDiffCallback = new EquipmentDiffCallback(equipmentList, equipments);
-            DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(equipmentDiffCallback);
-
-            equipmentList.clear();
-
-            equipmentList.addAll(equipments);
-
-            diffResult.dispatchUpdatesTo(this);
-
-        } else {
-            // first initialization
-            equipmentList = equipments;
-        }
-    }
-
     public List<Equipment> getEquipmentList() {
         return equipmentList;
     }
@@ -142,7 +123,7 @@ public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentViewHolder> 
 
         private final List<Equipment> oldEquipments, newEquipments;
 
-        public EquipmentDiffCallback(List<Equipment> oldEquipments, List<Equipment> newEquipments) {
+        EquipmentDiffCallback(List<Equipment> oldEquipments, List<Equipment> newEquipments) {
             this.oldEquipments = oldEquipments;
             this.newEquipments = newEquipments;
         }

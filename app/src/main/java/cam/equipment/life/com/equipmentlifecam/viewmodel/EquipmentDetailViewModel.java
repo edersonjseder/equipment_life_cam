@@ -8,7 +8,7 @@ import cam.equipment.life.com.equipmentlifecam.model.Equipment;
 
 public class EquipmentDetailViewModel extends ViewModel {
 
-    private LiveData<Equipment> equipment;
+    private final LiveData<Equipment> equipment;
 
     public EquipmentDetailViewModel(AppEquipmentLifeDatabase appDatabase, int equipmentId) {
         equipment = appDatabase.equipmentDao().loadEquipmentById(equipmentId);

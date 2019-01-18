@@ -3,7 +3,6 @@ package cam.equipment.life.com.equipmentlifecam.free.widget;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.RemoteViews;
@@ -28,7 +27,7 @@ public class EquipmentWidgetDataProvider implements RemoteViewsService.RemoteVie
     private static final String TAG = EquipmentWidgetDataProvider.class.getSimpleName();
 
     private List<Equipment> equipmentList = new ArrayList<>();
-    private Context context;
+    private final Context context;
 
     // Member variable for the database
     private AppEquipmentLifeDatabase mDb;
@@ -121,7 +120,7 @@ public class EquipmentWidgetDataProvider implements RemoteViewsService.RemoteVie
         return true;
     }
 
-    public void setEquipmentList(List<Equipment> equipmentList) {
+    private void setEquipmentList(List<Equipment> equipmentList) {
         this.equipmentList = equipmentList;
     }
 

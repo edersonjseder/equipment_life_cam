@@ -43,7 +43,7 @@ public abstract class AppEquipmentLifeDatabase extends RoomDatabase {
     }
 
     // Migration from version 1 to version 2 to add email column in profile table
-    static final Migration MIGRATION_1_2 = new Migration(1, 2) {
+    private static final Migration MIGRATION_1_2 = new Migration(1, 2) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
             database.execSQL("ALTER TABLE profile "

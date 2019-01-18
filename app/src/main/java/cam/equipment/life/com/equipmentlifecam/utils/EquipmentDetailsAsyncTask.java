@@ -10,11 +10,11 @@ public class EquipmentDetailsAsyncTask extends AsyncTask<String, Void, Equipment
 
     private Equipment equipmentInfo;
 
-    private OnPostEquipmentTaskListener mOnPostTaskListener;
+    private final OnPostEquipmentTaskListener mOnPostTaskListener;
 
-    private AppEquipmentLifeDatabase mDb;
+    private final AppEquipmentLifeDatabase mDb;
 
-    private int equipmentId;
+    private final int equipmentId;
 
     public EquipmentDetailsAsyncTask(OnPostEquipmentTaskListener onPostTaskListener,
                                      AppEquipmentLifeDatabase mDb, int equipmentId) {

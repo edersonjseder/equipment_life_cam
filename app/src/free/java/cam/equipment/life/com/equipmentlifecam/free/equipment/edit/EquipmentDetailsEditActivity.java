@@ -82,15 +82,12 @@ public class EquipmentDetailsEditActivity extends AppCompatActivity {
     private Equipment equipment;
 
     // Constants for priority
-    public static final String EQUIPMENT_OWNED = "Owned";
-    public static final String EQUIPMENT_SOLD = "Sold";
-    public static final String EQUIPMENT_STONED = "Stolen";
+    private static final String EQUIPMENT_OWNED = "Owned";
+    private static final String EQUIPMENT_SOLD = "Sold";
+    private static final String EQUIPMENT_STONED = "Stolen";
 
     //Image request code
-    private int PICK_IMAGE_REQUEST = 1;
-
-    //storage permission code
-    private static final int STORAGE_PERMISSION_CODE = 123;
+    private final int PICK_IMAGE_REQUEST = 1;
 
     //Bitmap to get image from gallery
     private Bitmap bitmap;
@@ -240,7 +237,7 @@ public class EquipmentDetailsEditActivity extends AppCompatActivity {
      * onSaveButtonClicked is called when the "save" button is clicked.
      * It retrieves user input and inserts that new task data into the underlying database.
      */
-    public void onSaveImageButtonClicked(Equipment equipment) {
+    private void onSaveImageButtonClicked(Equipment equipment) {
 
         populateEditedEntity(equipment);
 
@@ -281,7 +278,7 @@ public class EquipmentDetailsEditActivity extends AppCompatActivity {
     /**
      * getEquipmentStatusFromViews is called whenever the selected status needs to be retrieved
      */
-    public String getEquipmentStatusFromViews() {
+    private String getEquipmentStatusFromViews() {
 
         String status = "";
 
@@ -307,7 +304,7 @@ public class EquipmentDetailsEditActivity extends AppCompatActivity {
      *
      * @param priority the priority value
      */
-    public void setEquipmentStatusInViews(String priority) {
+    private void setEquipmentStatusInViews(String priority) {
 
         switch (priority) {
             case EQUIPMENT_OWNED:

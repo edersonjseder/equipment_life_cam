@@ -35,6 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/detail_text_margin_left"
+                android:hint="@string/hint_equipment_registration_brand"
                 tools:text="@string/equipment_brand_content"
                 android:layout_marginTop="@dimen/detail_text_margin_top"
                 android:textSize="14sp" />
@@ -54,6 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/detail_text_margin_left"
+                android:hint="@string/hint_equipment_registration_model"
                 tools:text="@string/equipment_model_content"
                 android:layout_marginTop="@dimen/detail_text_margin_top"
                 android:textSize="14sp" />
@@ -73,6 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/detail_text_margin_left"
+                android:hint="@string/hint_equipment_registration_serial"
                 tools:text="@string/equipment_serial_number_content"
                 android:layout_marginTop="@dimen/detail_text_margin_top"
                 android:textSize="14sp" />
@@ -197,6 +200,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:layout_marginLeft="@dimen/detail_text_margin_left"
+                android:hint="@string/hint_equipment_registration_short_description"
                 android:maxLines="6"
                 tools:text="@string/equipment_short_description_content"
                 android:textSize="14sp"

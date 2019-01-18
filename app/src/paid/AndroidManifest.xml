@@ -76,7 +76,7 @@
                 android:resource="@xml/equipment_widget_provider_info" />
         </receiver>
 
-        <activity android:name="cam.equipment.life.com.equipmentlifecam.paid.logoutsocial.VerifyLogoutActivity"></activity>
+        <activity android:name="cam.equipment.life.com.equipmentlifecam.paid.logoutsocial.VerifyLogoutActivity" />
     </application>
 
 </manifest>

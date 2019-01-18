@@ -33,7 +33,7 @@
 
     <string name="equipment_initial_image_button_google_login">Shows the Google icon as an option for the user to login via Google account</string>
 
-    <string name="equipment_initial_image_button_google_facebook_login">Shows the Facebook icon as an option for the user to login via Facebook account</string>
+    <string name="equipment_initial_image_button_facebook_login">Shows the Facebook icon as an option for the user to login via Facebook account</string>
 
     <string name="equipment_nav_bar_image_logo">Shows the equipment app logo in the drawer menu</string>
 
@@ -46,6 +46,12 @@
     <string name="equipment_list_item_circular_image">Shows the equipment picture on the list item</string>
 
     <string name="equipment_list_item_status_icon_image">Shows the equipment status icon on the list item</string>
+
+    <string name="image_screen_equipment_login_logo">Screen image shown at the app login</string>
+
+    <string name="image_google_login_button">Image shown on the button at the app login</string>
+
+    <string name="image_widget_list">Image shown on the top of the list at the app widget</string>
 
     <!-- Navigation drawer strings -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -71,6 +77,16 @@
     <string name="equipment_list_menu_search">Search equipment</string>
     <string name="equipment_checkbox_upload_image">Upload Image?</string>
     <string name="equipment_upload_image_successful">Successfully uploaded</string>
+
+    <string name="hint_equipment_edit_brand">Enter brand</string>
+    <string name="hint_equipment_edit_model">Enter model</string>
+    <string name="hint_equipment_edit_serial">Enter serial number</string>
+    <string name="hint_equipment_edit_short_description">Enter short description</string>
+
+    <string name="hint_equipment_registration_brand">Enter brand</string>
+    <string name="hint_equipment_registration_model">Enter model</string>
+    <string name="hint_equipment_registration_serial">Enter serial number</string>
+    <string name="hint_equipment_registration_short_description">Enter short description</string>
 
     <string name="option_equipment_status_owned">Owned</string>
     <string name="option_equipment_status_sold">Sold</string>
@@ -126,6 +142,24 @@
     <string name="profile_detail_city_label">City:</string>
     <string name="profile_detail_state_label">State:</string>
     <string name="profile_logout_menu_label">Logout</string>
+
+    <string name="hint_profile_edit_name">Enter name</string>
+    <string name="hint_profile_edit_cpf">Enter CPF</string>
+    <string name="hint_profile_edit_telephone">Enter telephone</string>
+    <string name="hint_profile_edit_email">Enter email</string>
+    <string name="hint_profile_edit_address">Enter address</string>
+    <string name="hint_profile_edit_city">Enter city</string>
+    <string name="hint_profile_edit_state">Enter state</string>
+    <string name="hint_profile_edit_password">Enter password</string>
+    <string name="hint_profile_edit_password_confirm">Enter password confirmation</string>
+
+    <string name="hint_profile_registration_name">Enter name</string>
+    <string name="hint_profile_registration_cpf">Enter CPF</string>
+    <string name="hint_profile_registration_telephone">Enter telephone</string>
+    <string name="hint_profile_registration_email">Enter email</string>
+    <string name="hint_profile_registration_address">Enter address</string>
+    <string name="hint_profile_registration_city">Enter city</string>
+    <string name="hint_profile_registration_state">Enter state</string>
 
     <!-- Owner initial buttons -->
     <string name="profile_sign_in_button">Sign In</string>

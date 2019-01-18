@@ -12,9 +12,9 @@ public class EquipmentListAsyncTask extends AsyncTask<Void, Void, List<Equipment
 
     private List<Equipment> equipmentList;
 
-    private OnPostEquipmentListTaskListener mOnPostListTaskListener;
+    private final OnPostEquipmentListTaskListener mOnPostListTaskListener;
 
-    private AppEquipmentLifeDatabase mDb;
+    private final AppEquipmentLifeDatabase mDb;
 
     public EquipmentListAsyncTask(OnPostEquipmentListTaskListener mOnPostListTaskListener,
                                   AppEquipmentLifeDatabase mDb) {

@@ -15,16 +15,16 @@ public class SessionManager {
     private static final String TAG = SessionManager.class.getSimpleName();
 
     // Shared Preferences
-    public SharedPreferences pref;
+    public final SharedPreferences pref;
 
     // Editor for Shared preferences
-    public SharedPreferences.Editor editor;
+    public final SharedPreferences.Editor editor;
 
     // Context
-    Context _context;
+    private final Context _context;
 
     // Shared pref mode
-    int PRIVATE_MODE = 0;
+    private final int PRIVATE_MODE = 0;
 
     // Sharedpref file name
     private static final String PREF_NAME = "EquipmentLife";
@@ -41,7 +41,7 @@ public class SessionManager {
     public static final String KEY_FAMILY_NAME = "profile_family_name";
 
     // Username
-    public static final String KEY_USERNAME = "profile_username";
+    private static final String KEY_USERNAME = "profile_username";
 
     // Email
     public static final String KEY_EMAIL = "profile_email";

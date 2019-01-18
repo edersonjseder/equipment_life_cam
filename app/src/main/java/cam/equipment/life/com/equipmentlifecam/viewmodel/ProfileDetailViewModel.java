@@ -8,7 +8,7 @@ import cam.equipment.life.com.equipmentlifecam.model.Profile;
 
 public class ProfileDetailViewModel extends ViewModel {
 
-    private LiveData<Profile> profile;
+    private final LiveData<Profile> profile;
 
     public ProfileDetailViewModel(AppEquipmentLifeDatabase appDatabase, String profileEmail) {
         profile = appDatabase.profileDao().loadProfileByEmail(profileEmail);

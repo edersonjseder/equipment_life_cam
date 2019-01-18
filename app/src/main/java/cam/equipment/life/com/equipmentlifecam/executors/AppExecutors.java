@@ -8,7 +8,6 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class AppExecutors {
-    private static final String LOG_TAG = AppExecutors.class.getSimpleName();
 
     private static final Object LOCK = new Object();
     private static AppExecutors sInstance;
@@ -38,17 +37,9 @@ public class AppExecutors {
         return diskIO;
     }
 
-    public Executor getMainThread() {
-        return mainThread;
-    }
-
-    public Executor getNetworkIO() {
-        return networkIO;
-    }
-
     private static class MainThreadExecutor implements Executor {
 
-        private Handler mainThreadHandler = new Handler(Looper.getMainLooper());
+        private final Handler mainThreadHandler = new Handler(Looper.getMainLooper());
 
         @Override
         public void execute(@NonNull Runnable command) {

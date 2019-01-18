@@ -129,7 +129,7 @@ public class ProfileRegistrationActivity extends AppCompatActivity {
      * onSaveButtonClicked is called when the "save" button is clicked.
      * It retrieves user input and inserts that new task data into the underlying database.
      */
-    public void onSaveButtonClicked() {
+    private void onSaveButtonClicked() {
 
         if (!validate()) {
             return;
@@ -189,7 +189,7 @@ public class ProfileRegistrationActivity extends AppCompatActivity {
 
     }
 
-    public boolean validate() {
+    private boolean validate() {
         boolean valid = true;
 
         Pattern emailPtrn = Pattern.compile(

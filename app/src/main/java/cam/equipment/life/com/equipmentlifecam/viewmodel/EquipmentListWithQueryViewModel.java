@@ -17,7 +17,7 @@ public class EquipmentListWithQueryViewModel extends AndroidViewModel {
     private static final String TAG = EquipmentListWithQueryViewModel.class.getSimpleName();
 
     private LiveData<List<Equipment>> equipments;
-    private AppEquipmentLifeDatabase database;
+    private final AppEquipmentLifeDatabase database;
 
     public EquipmentListWithQueryViewModel(@NonNull Application application) {
         super(application);

@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'equipment'
             keyPassword 'equipment'
-            storeFile file('/home/ederson/Documents/Capstone_1/Equipment_key/equipment_key.jks')
+            storeFile file('/opt/desenvolvimento/android_git/Capstone_stage_2/Equipment_Life_Cam/equipment_life_cam/app/equipment_key.jks')
             storePassword 'equipment'
         }
     }

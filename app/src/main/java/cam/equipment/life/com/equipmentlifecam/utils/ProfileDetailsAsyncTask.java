@@ -4,18 +4,17 @@ import android.os.AsyncTask;
 
 import cam.equipment.life.com.equipmentlifecam.database.AppEquipmentLifeDatabase;
 import cam.equipment.life.com.equipmentlifecam.listeners.OnPostProfileTaskListener;
-import cam.equipment.life.com.equipmentlifecam.model.Equipment;
 import cam.equipment.life.com.equipmentlifecam.model.Profile;
 
 public class ProfileDetailsAsyncTask extends AsyncTask<String, Void, Profile> {
 
     private Profile profile;
 
-    private OnPostProfileTaskListener mOnPostTaskListener;
+    private final OnPostProfileTaskListener mOnPostTaskListener;
 
-    private AppEquipmentLifeDatabase mDb;
+    private final AppEquipmentLifeDatabase mDb;
 
-    private String profileEmail;
+    private final String profileEmail;
 
     public ProfileDetailsAsyncTask(OnPostProfileTaskListener onPostTaskListener,
                                    AppEquipmentLifeDatabase mDb, String profileEmail) {

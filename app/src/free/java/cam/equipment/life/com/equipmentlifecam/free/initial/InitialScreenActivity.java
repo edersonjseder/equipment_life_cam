@@ -400,7 +400,7 @@ public class InitialScreenActivity extends AppCompatActivity implements View.OnC
 
     }
 
-    public boolean validate() {
+    private boolean validate() {
         boolean valid = true;
 
         Pattern emailPtrn = Pattern.compile(

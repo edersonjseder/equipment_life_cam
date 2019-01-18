@@ -1,14 +1,11 @@
 package cam.equipment.life.com.equipmentlifecam.free.login;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.annotation.Nullable;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.util.Log;
 import android.view.View;
@@ -24,14 +21,11 @@ import cam.equipment.life.com.equipmentlifecam.free.main.MainCamActivity;
 import cam.equipment.life.com.equipmentlifecam.free.session.SessionManager;
 import cam.equipment.life.com.equipmentlifecam.model.Profile;
 import cam.equipment.life.com.equipmentlifecam.utils.AlertDialogManager;
-import cam.equipment.life.com.equipmentlifecam.viewmodel.ProfileDetailViewModel;
-import cam.equipment.life.com.equipmentlifecam.viewmodel.factory.ProfileViewModelFactory;
 
 import static cam.equipment.life.com.equipmentlifecam.free.session.SessionManager.HAS_LOGGED_IN_FIRST_TIME_ALREADY;
 import static cam.equipment.life.com.equipmentlifecam.free.session.SessionManager.KEY_EMAIL;
 import static cam.equipment.life.com.equipmentlifecam.free.session.SessionManager.KEY_NAME;
 import static cam.equipment.life.com.equipmentlifecam.free.session.SessionManager.KEY_PASSWORD;
-import static cam.equipment.life.com.equipmentlifecam.free.session.SessionManager.KEY_USERNAME;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -169,7 +163,7 @@ public class LoginActivity extends AppCompatActivity {
         moveTaskToBack(true);
     }
 
-    public boolean validate() {
+    private boolean validate() {
         boolean valid = true;
 
         String email = editViewEmailLogin.getText().toString();

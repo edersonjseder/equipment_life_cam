@@ -7,7 +7,7 @@ import android.support.annotation.NonNull;
 import cam.equipment.life.com.equipmentlifecam.database.AppEquipmentLifeDatabase;
 import cam.equipment.life.com.equipmentlifecam.viewmodel.EquipmentDetailViewModel;
 
-public class EquipmentViewModelFactory extends ViewModelProvider.NewInstanceFactory {
+class EquipmentViewModelFactory extends ViewModelProvider.NewInstanceFactory {
 
     private final AppEquipmentLifeDatabase mDb;
     private final int mEquipmentId;

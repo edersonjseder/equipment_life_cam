@@ -134,7 +134,7 @@ public class ProfileDetailsEditActivity extends AppCompatActivity {
      * onSaveButtonClicked is called when the "save" button is clicked.
      * It retrieves user input and inserts that new task data into the underlying database.
      */
-    public void onSaveImageButtonClicked(Profile profile) {
+    private void onSaveImageButtonClicked(Profile profile) {
 
         if (isLoginFromGoogle || isLoginFromFacebook) {
 
@@ -188,7 +188,7 @@ public class ProfileDetailsEditActivity extends AppCompatActivity {
 
     }
 
-    public boolean validate() {
+    private boolean validate() {
         boolean valid = true;
 
         Pattern emailPtrn = Pattern.compile(
@@ -251,7 +251,7 @@ public class ProfileDetailsEditActivity extends AppCompatActivity {
         return valid;
     }
 
-    public boolean validateInfoFromSocial() {
+    private boolean validateInfoFromSocial() {
         boolean valid = true;
 
 

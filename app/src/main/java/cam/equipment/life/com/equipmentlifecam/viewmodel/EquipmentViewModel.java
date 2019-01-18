@@ -15,7 +15,7 @@ public class EquipmentViewModel extends AndroidViewModel {
     // Constant for logging
     private static final String TAG = EquipmentViewModel.class.getSimpleName();
 
-    private LiveData<List<Equipment>> equipments;
+    private final LiveData<List<Equipment>> equipments;
 
     public EquipmentViewModel(@NonNull Application application) {
         super(application);
