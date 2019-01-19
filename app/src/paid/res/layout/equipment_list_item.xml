@@ -11,7 +11,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="4dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:background="@drawable/rounded_equipment_image_item_list"
         android:src="@drawable/album_icon"
         android:contentDescription="@string/equipment_list_item_circular_image"/>
@@ -20,11 +20,10 @@
         android:id="@+id/tv_equipment_brand_list_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/circleView_equipment_picture"
-        android:layout_toRightOf="@+id/circleView_equipment_picture"
         tools:text="@string/equipment_brand_content"
         android:textColor="@color/list_item_equipment_brand_text_color"
         android:textSize="15dp"
@@ -35,11 +34,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_equipment_brand_list_info"
-        android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/circleView_equipment_picture"
-        android:layout_toRightOf="@+id/circleView_equipment_picture"
         android:ellipsize="end"
         android:maxLines="1"
         tools:text="@string/equipment_owner_content" />
@@ -49,11 +46,15 @@
         android:id="@+id/image_view_equipment_list_status"
         android:layout_width="32sp"
         android:layout_height="32sp"
+        android:layout_alignTop="@+id/tv_equipment_brand_list_info"
+        android:layout_alignBottom="@+id/et_equipment_owner"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="3dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="14dp"
+        android:layout_toEndOf="@+id/tv_equipment_brand_list_info"
+        android:contentDescription="@string/equipment_list_item_status_icon_image"
         android:padding="6dp"
-        android:src="@drawable/icon_list_black_ok"
-        android:contentDescription="@string/equipment_list_item_status_icon_image"/>
+        android:src="@drawable/icon_list_black_ok" />
 
 </RelativeLayout>

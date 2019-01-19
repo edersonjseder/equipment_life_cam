@@ -22,7 +22,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/equipment_brand_label"
-            android:labelFor="@+id/et_equipment_regist_brand"
             android:layout_marginTop="@dimen/detail_side_margin"
             android:layout_marginEnd="@dimen/detail_side_margin"
             android:textSize="12sp" />
@@ -31,7 +30,7 @@
             android:id="@+id/et_equipment_regist_brand"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/detail_text_margin_left"
+            android:layout_marginStart="@dimen/detail_text_margin_left"
             android:hint="@string/hint_equipment_registration_brand"
             tools:text="@string/equipment_brand_content"
             android:layout_marginTop="@dimen/detail_text_margin_top"
@@ -43,7 +42,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/equipment_model_label"
-            android:labelFor="@+id/et_equipment_regist_model"
             android:layout_marginTop="@dimen/detail_label_text_margin_top"
             android:layout_marginEnd="@dimen/detail_side_margin"
             android:textSize="12sp" />
@@ -52,7 +50,7 @@
             android:id="@+id/et_equipment_regist_model"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/detail_text_margin_left"
+            android:layout_marginStart="@dimen/detail_text_margin_left"
             tools:text="@string/equipment_model_content"
             android:hint="@string/hint_equipment_registration_model"
             android:layout_marginTop="@dimen/detail_text_margin_top"
@@ -64,7 +62,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/equipment_serial_number_label"
-            android:labelFor="@+id/et_equipment_regist_serial_number"
             android:layout_marginTop="@dimen/detail_label_text_margin_top"
             android:layout_marginEnd="@dimen/detail_side_margin"
             android:textSize="12sp" />
@@ -73,7 +70,7 @@
             android:id="@+id/et_equipment_regist_serial_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/detail_text_margin_left"
+            android:layout_marginStart="@dimen/detail_text_margin_left"
             tools:text="@string/equipment_serial_number_content"
             android:hint="@string/hint_equipment_registration_serial"
             android:layout_marginTop="@dimen/detail_text_margin_top"
@@ -95,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="@string/equipment_registration_date_content"
-            android:layout_marginLeft="@dimen/registration_text_margin_left"
+            android:layout_marginStart="@dimen/registration_text_margin_left"
             android:layout_marginTop="@dimen/detail_text_margin_top"
             android:textSize="14sp" />
 
@@ -123,7 +120,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="@string/equipment_owner_content"
-            android:layout_marginLeft="@dimen/registration_text_margin_left"
+            android:layout_marginStart="@dimen/registration_text_margin_left"
             android:layout_marginTop="@dimen/detail_text_margin_top"
             android:textSize="14sp" />
 
@@ -167,7 +164,7 @@
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:layout_marginLeft="@dimen/detail_text_margin_left"
+                    android:layout_marginStart="@dimen/detail_text_margin_left"
                     android:layout_marginTop="@dimen/detail_text_margin_top"
                     android:checked="true"
                     android:text="@string/option_equipment_status_owned"
@@ -178,7 +175,7 @@
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:layout_marginLeft="@dimen/detail_text_margin_left"
+                    android:layout_marginStart="@dimen/detail_text_margin_left"
                     android:layout_marginTop="@dimen/detail_text_margin_top"
                     android:text="@string/option_equipment_status_sold"
                     android:textSize="14sp" />
@@ -193,7 +190,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/equipment_short_description_label"
-            android:labelFor="@+id/et_equipment_regist_short_description"
             android:layout_marginTop="@dimen/detail_label_text_margin_top"
             android:textSize="12sp" />
 
@@ -202,7 +198,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
-            android:layout_marginLeft="@dimen/detail_text_margin_left"
+            android:layout_marginStart="@dimen/detail_text_margin_left"
             android:maxLines="6"
             android:hint="@string/hint_equipment_registration_short_description"
             tools:text="@string/equipment_short_description_content"

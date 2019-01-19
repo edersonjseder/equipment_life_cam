@@ -7,6 +7,7 @@ import android.webkit.MimeTypeMap;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class Utils {
 
@@ -62,7 +63,7 @@ public class Utils {
 
         try {
 
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.forLanguageTag("pt_BR"));
 
             date = sdf.format(dateRegistered);
 

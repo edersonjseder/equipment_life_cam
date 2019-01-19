@@ -4,7 +4,6 @@ import android.content.Context;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -119,33 +118,4 @@ public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentViewHolder> 
         return (equipmentList != null) ? equipmentList.size() : 0;
     }
 
-    class EquipmentDiffCallback extends DiffUtil.Callback {
-
-        private final List<Equipment> oldEquipments, newEquipments;
-
-        EquipmentDiffCallback(List<Equipment> oldEquipments, List<Equipment> newEquipments) {
-            this.oldEquipments = oldEquipments;
-            this.newEquipments = newEquipments;
-        }
-
-        @Override
-        public int getOldListSize() {
-            return oldEquipments.size();
-        }
-
-        @Override
-        public int getNewListSize() {
-            return newEquipments.size();
-        }
-
-        @Override
-        public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
-            return oldEquipments.get(oldItemPosition).getId() == newEquipments.get(newItemPosition).getId();
-        }
-
-        @Override
-        public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
-            return oldEquipments.get(oldItemPosition).equals(newEquipments.get(newItemPosition));
-        }
-    }
 }

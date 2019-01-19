@@ -33,7 +33,7 @@
 
     <string name="equipment_initial_image_button_google_login">Shows the Google icon as an option for the user to login via Google account</string>
 
-    <string name="equipment_initial_image_button_google_facebook_login">Shows the Facebook icon as an option for the user to login via Facebook account</string>
+    <string name="equipment_initial_image_button_facebook_login">Shows the Facebook icon as an option for the user to login via Facebook account</string>
 
     <string name="equipment_nav_bar_image_logo">Shows the equipment app logo in the drawer menu header</string>
 
